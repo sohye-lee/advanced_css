@@ -1,33 +1,53 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color: $color-gray-dark;
-    padding: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 3rem;
 }
 
 .heading-primary {
-    color: $color-white;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
 
-    &--main {
-        display: block;
-        font-size: 6rem;
-        font-weight: 400;
-        letter-spacing: 3.5rem;
-        animation: moveInLeft 1s ease-out .5s forwards;
-        opacity: 0;
-    }
-    
-    &--sub {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 1.7rem;
-        opacity: 0;
-        animation: moveInRight 1s ease-out .5s forwards;
-    }
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 1s ease-out 0.5s forwards;
+    opacity: 0;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.7rem;
+    opacity: 0;
+    animation: moveInRight 1s ease-out 0.5s forwards;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 350ms;
+
+  &:hover {
+    transform: skewY(2deg);
+  }
 }
