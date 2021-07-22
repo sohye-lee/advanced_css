@@ -50,7 +50,18 @@ body {
   letter-spacing: 0.2rem;
   transition: all 350ms; }
   .heading-secondary:hover {
-    transform: skewY(2deg); }
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -79,6 +90,18 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -111,7 +134,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s; }
+  transition: all 0.4s; }
 
 .btn--white {
   background-color: #fff;
@@ -120,7 +143,54 @@ body {
     background-color: #fff; }
 
 .btn--animated {
-  animation: moveInBottom 1s backwards .8s ease-out; }
+  animation: moveInBottom 1s backwards 0.8s ease-out; }
+
+.btn-text:link, .btn-text:visited {
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px solid #55c57a;
+  padding: 3px 10px;
+  transition: all 0.2s ease;
+  font-size: 1.6rem;
+  font-weight: 600; }
+
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0px 0.2rem 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.3 ease;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #55c57a;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
 
 .header {
   height: 95vh;
@@ -144,7 +214,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -153,9 +222,7 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: orangered;
     float: left;
-    color: #fff;
     padding: 1.5rem;
     font-size: 1.5rem; }
     .row [class^="col-"]:not(:last-child) {
